@@ -1,0 +1,209 @@
+<html>
+<head><title>Full Form</title>
+<style>
+img{
+margin:15px auto;
+display:block;
+width:200px;
+
+}
+body{
+background-color:black;
+
+}
+#box{
+width:500px;
+border:2px solid blue;
+margin:auto;
+padding:20px;
+text-align:center;
+font-size:30px;
+color:white;
+box-shadow:10px -10px  5px  blue;
+}
+input{
+font-size:15px;
+padding:5px;
+border-radius:10px;
+}
+
+</style>
+
+
+</head>
+<body>
+<img src="https://lh3.googleusercontent.com/proxy/gajj2ogKqxtCA6H8XqO3-dg1bdHIcz_7Xt1q80HbmaYfeCfkkUENuGLC1hxQCWKjisjdOjes5ZBYhFcQyV8-DtM8lbN0-pyxPwnNpwqkuHPvkIP6QCe0wTWs0AKfZQ8">
+<h1 style="font-size:50px;color:blue;text-align:center;">Student Admission</h1>
+<p style="text-align:center;font-size:30px;color:blue;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+<form id="box" onsubmit=" return validation();">
+Enter your name:<br><br>
+ <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()" placeholder="Enter your Name" autocomplete="off" ><br><br>
+
+
+Enter your collage:<br><br>
+<input type="text"id="myInput2" name="collage" placeholder="Enter your collage"autocomplete="off" ><br><br>
+
+Enter your email:<br><br>
+<input type="text" id="myInput3"name="email" onfocus="focusFunction()" onblur="blurFunction()" placeholder="Enter your email"autocomplete="off" ><br><br>
+
+Enter your number:<br><br>
+<input type="tel" id="myInput4"name="number" placeholder="Enter your number"autocomplete="off" ><br><br>
+
+Enter your password:<br><br>
+<input type="password"  id="myInput5"name="passw" onfocus="focusFunction()" onblur="blurFunction()"placeholder="Enter your password"autocomplete="off" ><br><br>
+
+Depertment:
+<select style="font-size:20px;" required>
+<option value=""></option>
+<option value="CSE">CSE</option>
+<option value="ME">ME</option>
+<option value="EE">EE</option>
+<option value="BCA">BCA</option>
+<option value="IT">IT</option>
+
+</select><br><br>
+Gender:
+<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="male" required>Female<br><br>
+Photo choose:<br>
+<input type="file" name="file" value="file" required><br><br>
+
+age:<br>
+<input type="text" name="age" placeholder="Enter Age"autocomplete="off" id="myInput6"><br><br>
+First fill the form  ,then click it.<br>
+<input type="submit" name="submit" value="click it" style="font-size:20px;">
+
+
+
+</form>
+<script>
+function focusFunction() {
+  document.getElementById("myInput").style.background = "yellow";
+document.getElementById("myInput3").style.background = "yellow";
+document.getElementById("myInput5").style.background = "yellow";
+
+}
+function blurFunction() {
+  document.getElementById("myInput").style.background = "";
+document.getElementById("myInput3").style.background = "";
+document.getElementById("myInput5").style.background = "";
+
+}
+function validation()
+{
+var name=document.getElementById("myInput").value;
+var col=document.getElementById("myInput2").value;
+
+var number=document.getElementById("myInput4").value;
+var email=document.getElementById("myInput3").value;
+var pass=document.getElementById("myInput5").value;
+var age=document.getElementById("myInput6").value;
+
+
+
+if(name =="")
+{
+alert("**please fill name");
+return false;
+}
+
+if((name.length<=3) || (name.length>20))
+{
+alert("**length of name must be between 3 and 20 ");
+return false;
+}
+
+if(!isNaN(name))
+{
+
+alert("only character allow");
+return false;
+}
+if(col =="")
+{
+alert("**please fill collage name");
+return false;
+}
+if((col.length<=2) )
+{
+alert("**length of collage name must be greater than 2 ");
+return false;
+}
+
+if(!isNaN(col))
+{
+
+alert("only character allow in collage name");
+return false;
+}
+
+if(email =="")
+{
+alert("**please fill email");
+return false;
+}
+if(email.indexOf('@') <= 0)
+{
+alert("** in email @ is in invalid position");
+return false;
+}
+if((email.charAt(email.length-4)!='.')&&(email.charAt(email.length-3)!="."))
+{
+alert("**in email  . is in invalid position");
+return false;
+}
+
+if(number =="")
+{
+alert("**please fill number");
+return false;
+}
+if(isNaN(number))
+{
+alert("**please fill ph number with  digit only not character");
+return false;
+}
+if(number.length!=10)
+{
+alert("**number must be ten digit");
+return false;
+}
+
+
+
+
+if(pass =="")
+{
+alert("**please fill password");
+return false;
+}
+
+if((pass.length<=8) || (pass.length>=20))
+{
+alert("**length of name must be between 8 and 20 and use special character ");
+return false;
+}
+if(age =="")
+{
+alert("**please fill age");
+return false;
+}
+if(isNaN(age))
+{
+alert("**please fill age with  digit only not character");
+return false;
+
+}
+
+}
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

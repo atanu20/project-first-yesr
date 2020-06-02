@@ -1,0 +1,64 @@
+<html>
+<head><title>from css</title>
+<style>
+body{
+background-color:black;
+
+
+}
+#box{
+width:500px;
+border:2px solid blue;
+margin:auto;
+padding:20px;
+text-align:center;
+font-size:30px;
+color:white;
+box-shadow:10px -10px  5px  blue;
+}
+input{
+font-size:15px;
+padding:5px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+<body onload="alert('Hello')";>
+<h1 style="text-align:center;font-size:50px;padding:30px;color:blue;text-shadow:5px 5px 5px blue;">Coursera Form</h1>
+<form id="box">
+Enter your name:<br><br>
+ <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()" placeholder="Enter your Name"><br><br>
+Enter your collage:<br><br>
+<input type="text" name="collage" placeholder="Enter your collage"><br><br>
+
+Enter your email:<br><br>
+<input type="email" name="email" placeholder="Enter your email"><br><br>
+
+Enter your number:<br><br>
+<input type="tel" name="number" placeholder="Enter your number"><br><br>
+
+Enter your password:<br><br>
+<input type="password" name="passw" placeholder="Enter your password"><br><br>
+
+<button onclick="alert('Welcome!!YOU Feel it Successfully')" style="font-size:25px;border:0;border-radius:5px;">click it!</botton>
+
+
+
+
+</form>
+<script>
+function focusFunction() {
+  document.getElementById("myInput").style.background = "yellow";
+}
+function blurFunction() {
+  document.getElementById("myInput").style.background = "orange";
+}
+
+</script>
+</body>
+
+
+
+</html>

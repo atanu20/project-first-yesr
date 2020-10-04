@@ -1,0 +1,299 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Fachanic</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+<!-- <link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> --> 
+
+    <!-- Favicons -->
+<!-- <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c"> -->
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+     
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+  <a class="navbar-brand" href="/">Fachanic </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('about')}}">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('blog')}}">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#modalRelatedContent" href="#">Contact</a>
+        <!-- Button trigger modal-->
+
+  
+  <!--Modal: modalRelatedContent-->
+  <div class="modal fade right" id="modalRelatedContent" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header bg-info">
+          <h3 class="heading text-white ">Contact</h3>
+  
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+  
+        <!--Body-->
+        <div class="modal-body">
+  
+            <form action="/contact" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter name" id="name" required>
+                  </div>
+                <div class="form-group">
+                  <label for="email">Email address:</label>
+                  <input type="email" class="form-control" name="email" placeholder="Enter email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
+                  </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Style Types</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalRelatedContent12" href="#">Face</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalRelatedContent13" href="#">Body</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalRelatedContent14" href="#">Fitness</a>
+        </div>
+        <!-- Button trigger modal-->
+
+  <!--Modal: modalRelatedContent-->
+  <div class="modal fade right" id="modalRelatedContent12" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header bg-success">
+          <h3 class="heading text-white"> Face Related </h3>
+  
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+  
+        <!--Body-->
+        <div class="modal-body">
+  
+          <div class="row">
+            <div class="col-5">
+              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(55).jpg"
+                class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-7">
+              <p><strong>Beauty of Face </strong></p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam rerum at aliquid earum velit placeat deserunt nulla cupiditate neque dolores doloremque, asperiores facere aliquam amet nemo, quos ab quasi quibusdam.
+             </p>
+              
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <div class="modal fade right" id="modalRelatedContent13" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header bg-warning">
+            <h3 class="heading text-white"> Body Related </h3>
+  
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+  
+        <!--Body-->
+        <div class="modal-body">
+  
+          <div class="row">
+            <div class="col-5">
+              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(55).jpg"
+                class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-7">
+              <p><strong>Body Masag</strong></p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam rerum at aliquid earum velit placeat deserunt nulla cupiditate neque dolores doloremque, asperiores facere aliquam amet nemo, quos ab quasi quibusdam.
+            </p>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <div class="modal fade right" id="modalRelatedContent14" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header bg-success">
+            <h3 class="heading text-white"> Fitness Related </h3>
+  
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+  
+        <!--Body-->
+        <div class="modal-body">
+  
+          <div class="row">
+            <div class="col-5">
+              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(55).jpg"
+                class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-7">
+              <p><strong>Fitness Types</strong></p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam rerum at aliquid earum velit placeat deserunt nulla cupiditate neque dolores doloremque, asperiores facere aliquam amet nemo, quos ab quasi quibusdam.
+            </p>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!--Modal: modalRelatedContent-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Admin</a>
+        <!-- Button trigger modal-->
+
+
+      </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  
+  </div>
+</div>
+</nav>
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Welcome Fachanic</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" href="{{url_for('blog')}}" role="button">View blog &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Fashion</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        
+      </div>
+      <div class="col-md-4">
+        <h2>Smartness</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+       
+      </div>
+      <div class="col-md-4">
+        <h2>Beauty</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+       
+      </div>
+    </div>
+
+    <hr>
+    
+      
+      <!-- Modal: modalPoll -->
+   
+
+</main>
+
+<footer class="container">
+  <p>&copy; Fachanic 2017-2020</p>
+</footer>
+</body>
+</html>

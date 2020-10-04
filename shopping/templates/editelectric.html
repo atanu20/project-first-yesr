@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<style>
+    #change:before{
+content:'';
+animation:change 10s linear infinite;
+color:blue;
+}
+@keyframes change{
+
+0%{
+content:"Boys and Ladies Dress";
+}
+20%{
+content:"Iphone";
+}
+40%{
+content:"Fresh Food ";
+}
+60%{
+content:"Good Toys";
+}
+80%{
+content:"Mi Phone";
+}
+100%{
+content:"Dell Laptop";
+}
+
+
+
+}
+.text{
+
+animation:anim1 2s linear infinite;
+}
+
+@keyframes anim1{
+
+0%{
+
+color:rgb(236, 15, 126);
+
+}
+30%{
+
+color:lime;
+
+}
+60%{
+
+color:rgb(243, 77, 11);
+
+}
+100%{
+
+color:blue;
+
+}
+
+}
+ .man{
+ 
+       transform: translateY(0px) scale(1);
+      
+       transition: 1s;
+       box-shadow:3px 3px 3px greenyellow;
+   }
+.man:hover{
+    
+    transform:translateY(-5px)  scale(1);
+} 
+
+
+
+</style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="100" >
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top text-center">
+        <div class="container">
+        <a class="navbar-brand" href="/home"><h1 class="animated infinite bounce  text-warning">SHOP ZONE</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#modalRelatedContent" href="#">Contact</a>
+
+
+                <div class="modal fade right" id="modalRelatedContent" tabindex="-1" role="dialog"
+                aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+                  <!--Content-->
+                  <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header  btn-success">
+                      <h3 class="heading text-white ">Contact</h3>
+              
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                      </button>
+                    </div>
+              
+                    <!--Body-->
+                    <div class="modal-body">
+              
+                        <form action="/contact" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" name="name" placeholder="Enter name" id="name" required>
+                              </div>
+                            <div class="form-group">
+                              <label for="email">Email address:</label>
+                              <input type="email" class="form-control" name="email" placeholder="Enter email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
+                                <small>Please give a value able comment</small>
+                              </div>
+                            <button type="submit" class="btn  btn-success">Submit</button>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.Content-->
+                </div>
+
+
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Our Product
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/dress">Dress</a> <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/electronics">Electries</a> <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Vegitables</a> <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Game and Toys</a> <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Other</a>
+                
+              </div>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/adminlogin">Admin</a>
+            </li>
+            
+          </ul>
+        </div>
+        </div>
+      </nav><br><br>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    
+    <h1 class="text-success">Admin panel</h1>      
+    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+    <a href="/logout"><button type="button" class="btn btn-warning float-right"> Logout</button></a>
+    <a href="/adminlogin"><button type="button" class="btn btn-warning float-left">Dashboard</button></a>
+  </div>
+  <br><br>
+</div>
+
+
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+  
+    {% if messages %}
+  
+    {% for message in messages %}
+  
+    <div class="alert alert-success alert-dismissable" role="alert">
+  
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+  
+            <span aria-hidden="true">x</span>
+  
+        </button>
+  
+  
+    {{message}}
+  
+  
+    </div>
+  
+  
+    {% endfor %}
+  
+    {% endif %}
+    {% endwith %}
+  
+  
+  
+  </div>
+
+
+  <div class="container w-75">
+    <h3>Upload Image here</h3>
+    <br>
+    <form action="/uploader" id="myform" method="post" enctype="multipart/form-data" >
+        <input type="file" name="image" class="form-control-file " required >
+        <br>
+        <button type="submit" class="btn btn-success btn-sm">Submit</button>
+    
+    </form>
+    <hr>
+
+    <button type="button" class="btn btn-info"> Add new content</button>
+    <br>
+    <hr>
+    {% for d in dresss %}  
+
+    <form action="/editelectric/{{d[0]}}"   method="post">
+        <div class="form-group">
+          <label for="title">Dress Name:</label>
+        <input type="text" class="form-control" id="uname1" placeholder="Enter title" name="name" value="{{d[1]}}"  required>
+         
+          
+        </div>
+
+        <div class="form-group">
+            <label for="image">Image:</label>
+            <input type="file" class="form-control" value="{{d[2]}}" id="uname3" placeholder="Enter image" name="image"  required>
+           
+            
+          </div>
+
+        <div class="form-group">
+          <label for="Author">Price:</label>
+          <input type="text" class="form-control" value="{{d[3]}}" id="uname2" placeholder="Enter author" name="price"  required>
+         
+          
+        </div>
+        
+        
+        
+
+
+
+        
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      {% endfor %}
+    
+</div>
+
+
+<br><br>
+<!-- <br><br><br><br>
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  <!-- </footer> --> 
+
+  <script>
+
+
+
+document.getElementById("myform").addEventListener("submit",myfun);
+function myfun()
+{
+  alert("image uploaded successfully....");
+}
+
+
+  </script>
+</body>
+</html>

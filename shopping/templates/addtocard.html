@@ -1,0 +1,434 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Blog post</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <style>
+        body{
+            background-color:cornsilk;
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+i{
+    color:red;
+}
+i:hover{
+  color:lime;
+}
+.man img{
+  width:300px ;
+  height: 300px;
+}
+
+ul{
+  list-style-type: none;
+}
+button:hover{
+  background-color:mediumvioletred;
+}
+    
+    </style>
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+    
+
+
+
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top text-center">
+  <div class="container">
+  <a class="navbar-brand" href="/home"><h1 class="animated infinite bounce  text-warning">SHOP ZONE</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#modalRelatedContent" href="#">Contact</a>
+
+
+
+          <div class="modal fade right" id="modalRelatedContent" tabindex="-1" role="dialog"
+          aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+          <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+            <!--Content-->
+            <div class="modal-content">
+              <!--Header-->
+              <div class="modal-header  btn-success">
+                <h3 class="heading text-white ">Contact</h3>
+        
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+              </div>
+        
+              <!--Body-->
+              <div class="modal-body">
+        
+                  <form action="/contact" method="POST">
+                      <div class="form-group">
+                          <label for="name">Name:</label>
+                          <input type="text" class="form-control" name="name" placeholder="Enter name" id="name" required>
+                        </div>
+                      <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter email" id="email" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="message">Message</label>
+                          <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
+                          <small>Please give a value able comment</small>
+                        </div>
+                      <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <!--/.Content-->
+          </div>
+
+
+
+        </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Our Product
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/dress">Dress</a> <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/electronics">Electries</a> <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Vegitables</a> <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Game and Toys</a> <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Other</a>
+          
+        </div>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/adminlogin">Admin</a>
+    </li>
+      
+    </ul>
+  </div>
+  </div>
+</nav><br><br><br><br>
+
+
+
+
+<br>
+<div class="container">
+    <div class="row">
+          <!-- Page Content -->
+  <div class="container text-center">
+
+    <div class="row">
+
+
+     
+      <div class="col-lg-8 shadow p-3 mb-5 bg-white rounded">
+        <br><br><br>
+          <div class="row ">
+
+            <div class="col-lg-7 mb-lg-0 mb-5 man shadow  bg-white rounded">
+              
+                <!-- <img class="card-img-top img-fluid" src="2.jpg" alt="Card image"> -->
+
+
+
+
+
+
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                  <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                  </ul>
+                  <div class="carousel-inner">
+                    {% for d in dresss %}  
+                    {% set fimg = 'img/' + d[2] %}
+                    <div class="carousel-item active">
+                      <img src="{{ url_for('static', filename=fimg) }}" alt="Los Angeles" >
+                       
+                    </div>
+                    <div class="carousel-item">
+                      <img src="{{ url_for('static', filename=fimg) }}" alt="Chicago" >
+                         
+                    </div>
+                    <div class="carousel-item">
+                      <img src="{{ url_for('static', filename=fimg) }}" alt="New York" >
+                      
+                    </div>
+                   
+                  </div>
+                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+                </div>
+               
+  
+            </div>
+  <div class="col-lg-5 shadow p-2 mb-5 bg-white rounded"  >
+      <div class="card-header">
+          <span id="dress_name_id">{{d[1]}}</span>
+      </div>
+<br>
+      <div class="float-left">
+        <h6>Total Viwes</h6>
+        <p>102</p>
+        <i type="button" onclick="icon('icons','sub')" id="icons" style="color:black;" class="fa fa-heart pt-5 fa-2x" aria-hidden="true"></i>
+       <p id='sub'>0</p>
+        <!-- <i type="button" onclick="icon('icons1')" id="icons1" style="color:black;" class="fa fa-thumbs-up p-2 fa-2x" aria-hidden="true"></i> -->
+
+
+      </div>
+          
+<div class="float-right">
+    <div class="btn-group btn-group-sm">
+        <button type="button" onclick="dec('dress','price_shirt')" class="border border-light p-2 ">-</button>
+        <input type="text" id="dress" size=4 class=" border border-light text-center" value="1">
+        <button type="button"  onclick="inc('dress','price_shirt')" class="border border-light p-2">+</button>
+      </div>
+    <br><br>
+<h4 class="pt-5">&#8377 <span id="price_shirt">{{d[3]}}</span></h4>
+</div>
+
+
+
+         
+
+     
+      
+                
+            </div>
+          </div>
+         
+          <br><br>
+<ul class="float-left">
+  <p style="color: chocolate;">:~BEST Tips~:</p>
+  <li>Dry Wash</li>
+  <li>Pure cutton</li>
+  <li>Always colour Full</li>
+  
+</ul>
+    
+        
+    </div>
+    <div class="col-lg-4 ">
+      <div class="card  my-4 shadow p-3 mb-5 bg-white rounded">
+        <h5 class="card-header bg-info text-white">Order Card</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-12 ">
+                <!-- Default form register -->
+
+
+                <form id="myform" class="text-center border border-light p-5" action="/orderr" method="POST">
+                  <input type="text" id="dress_name" name="dressname" class="form-control mb-4"  value="{{d[1]}}">
+
+    <div class="form-row mb-4 ">
+        <div class="col ">
+            <!-- First name -->
+            <small>Amount</small>
+            <input type="text" id="Name1" name="amount" class="  form-control text-center border  border-top-0 border-right-0 border-left-0" value="{{d[3]}}" >
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <small>Total pices</small>
+            <input type="text" id="Name2" name="pices" class=" form-control text-center border border-top-0 border-right-0 border-left-0" value="1">
+        </div>
+    </div>
+
+    <input type="text" id="name" name="user" class="form-control mb-4"  placeholder="Name" required>
+
+    <!-- E-mail -->
+    <input type="email" id="email" name="mail" class="form-control mb-4" placeholder="E-mail" required>
+
+    <!-- Password -->
+    <input type="password" id="password" name="password" class="form-control" placeholder="Password"  required>
+    <small  class="form-text text-muted mb-4">
+        At least 8 characters and 1 digit
+    </small>
+
+    <!-- Phone number -->
+    <input type="tel" id="number" name="number" class="form-control" placeholder="Phone number"  required>
+<br>
+    <input type="text" id="address" name="address" class="form-control" placeholder="address"  required>
+
+   
+    <button type="submit" class=" btn btn-info my-4 btn-block"  >Order Now</button>
+                </form>
+
+                {% endfor %}
+
+
+<!-- Default form register -->
+               
+            </div>
+            
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <!-- hi -->
+
+      </div>
+
+    </div>
+    
+    </div>
+</div>
+
+ 
+
+
+
+
+<br>
+ 
+  
+  <!-- Footer -->
+  <!-- <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  <!-- </footer> -->
+
+  <!-- Bootstrap core JavaScript -->
+  <!-- <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <script>
+     
+     var a=0;
+      var b=0;
+      var v=a+b;
+
+var name1_amt=document.getElementById('Name1');
+var name2_que=document.getElementById('Name2');
+
+console.log(name2_que);
+
+
+      function icon(val,sub)
+      {
+        
+      v=v+1;
+          
+         let iconv=document.getElementById(val).removeAttribute("style");
+        
+         
+      let su=document.getElementById(sub).innerHTML=v;
+        
+         
+
+        
+        console.log(a);
+
+         
+      };
+
+
+
+function inc(val,price){
+    let iconv=document.getElementById(val);
+    var pric=document.getElementById(price);
+    console.log(pric.innerHTML);
+    if(iconv.value>=5)
+    {
+        iconv.value=5;
+        alert("number never be greater than 5");
+    }
+    else{
+        iconv.value=parseInt(iconv.value)+1;
+        name1_amt.value=parseInt(pric.innerHTML)+100;
+        name2_que.value=parseInt(name2_que.value)+1;
+        pric.innerHTML=parseInt(pric.innerHTML)+100;
+       
+
+    }
+
+
+}
+
+function dec(val,price){
+    let iconv=document.getElementById(val);
+    var pric=document.getElementById(price);
+    console.log(iconv);
+    if(iconv.value<=1)
+    {
+        iconv.value=1;
+        alert("number never be less than 1");
+    }
+    else{
+
+        iconv.value=parseInt(iconv.value)-1;
+        name2_que.value=parseInt(name2_que.value)-1;
+        name1_amt.value=parseInt(pric.innerHTML)-100;
+        pric.innerHTML=parseInt(pric.innerHTML)-100;
+
+    }
+
+
+}
+
+
+
+document.getElementById("myform").addEventListener("submit",myfun);
+function myfun()
+{
+  alert("Your order place successfully,we will provite it with in 7 working days");
+}
+
+
+  </script>
+
+</body>
+
+</html>
+
+

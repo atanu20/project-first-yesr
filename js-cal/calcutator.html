@@ -1,0 +1,94 @@
+<html>
+<head><title>calculator by ATANU </title>
+<style>
+#calculator{
+width:300px;
+border:2px solid black;
+text-align:center;
+margin:50px auto;
+background:black;
+padding:10px;
+box-shadow:2px 2px 15px blue;
+}
+
+input{
+width:50px;
+font-size:20px;
+color:black;
+font-weight:solid;
+outline:none;
+border:2px solid lime;
+border-radius:10%;
+margin:5px;
+}
+
+#ans{
+width:203px;
+padding:10px;
+font-size:25px;
+border-radius:5%;
+}
+
+#clear{
+border-radius:5%;
+width:78px;
+
+
+}
+</style>
+</head>
+<body>
+
+<div id="calculator">
+
+ <form name="forms">
+<h1 style="color:yellow;text-align:left;">CALCULATOR</h1>
+  <input type="text" name="answer" id="ans"><br><br>
+<input type="button" value="&radic;" onclick="forms.answer.value =Math.sqrt(forms.answer.value) " style="background:#a7c91c">
+<input type="button" value="&larr;" onclick="forms.answer.value =forms.answer.value.slice(0,-1) " style="background:#a7c">
+<input type="button" value="CE" onclick="forms.answer.value ='' "   style="background:blue">
+<br><br>
+<input type="button" value="1" onclick="forms.answer.value +='1' " style="background:#a8323e">
+<input type="button" value="2" onclick="forms.answer.value +='2' "  style="background:pink">
+<input type="button" value="3" onclick="forms.answer.value +='3' "  style="background:hotpink">
+<br><br>
+
+<input type="button" value="4" onclick="forms.answer.value +='4' " style="background:#5ad">
+<input type="button" value="5" onclick="forms.answer.value +='5' " style="background:#fff">
+<input type="button" value="6" onclick="forms.answer.value +='6' " style="background:#11cfa9">
+<br><br>
+
+<input type="button" value="7" onclick="forms.answer.value +='7' " style="background:#bc11cf">
+<input type="button" value="8" onclick="forms.answer.value +='8' " style="background:#11cccf">
+<input type="button" value="9" onclick="forms.answer.value +='9' " style="background:#cf11a9">
+<br><br>
+<input type="button" value="0" onclick="forms.answer.value +='0' " style="background:#bf1">
+<input type="button" value="+" onclick="forms.answer.value +='+' " style="background:#b05">
+<input type="button" value="-" onclick="forms.answer.value +='-' " style="background:#999">
+<br><br>
+<input type="button" value="*" onclick="forms.answer.value +='*' " style="background:#cf1183">
+<input type="button" value="/" onclick="forms.answer.value +='/' " style="background:blue">
+<input type="button" value="=" onclick="forms.answer.value =eval(forms.answer.value) ">
+
+<br><br>
+<input type="button" value="." onclick="forms.answer.value +='.' "   style="background:#fff">
+<input type="button" value="&#40;" onclick="forms.answer.value +='&#40;' " style="background:#bf1">
+<input type="button" value="&#41;" onclick="forms.answer.value +='&#41;' " style="background:red">
+<br><br>
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

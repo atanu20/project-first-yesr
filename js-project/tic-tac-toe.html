@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+        td{
+            width: 100px;
+            height: 100px;
+            background: yellowgreen;
+            font-size: 40px;
+            text-align: center;
+            border-radius: 15px;
+
+        }
+        table{
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h2>TIC TAC TOE</h2>
+        <h3 id="play">Lets Play</h3>
+        <table>
+            <tr>
+
+                <td id="r1" onclick="print('1')"></td>
+                <td id="r2" onclick="print('2')"></td>
+                <td id="r3" onclick="print('3')"></td>
+            </tr>
+            <tr>
+
+                <td id="r4" onclick="print('4')"></td>
+                <td id="r5" onclick="print('5')"></td>
+                <td id="r6" onclick="print('6')"></td>
+            </tr>
+            <tr>
+
+                <td id="r7" onclick="print('7')"></td>
+                <td id="r8" onclick="print('8')"></td>
+                <td id="r9" onclick="print('9')"></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+    </center>
+    <script>
+        let sign="X";
+        let dis=document.getElementById("play");
+        let count=0;
+        function print(number)
+        {
+            let co=document.getElementById("r"+number);
+            
+            if(co.innerText=="")
+            {
+                co.innerText=sign;
+                count++;
+                //alert("value"+count);
+                winner();
+            check();
+            
+            dis.innerHTML="<h2>"+"THIS IS TURN OF " +sign+"</h2>";
+
+
+            
+            }
+           
+        }
+
+        function check()
+        {
+            if(sign=="X")
+            sign="O";
+            else{
+                sign="X";
+            }
+
+        }
+
+        function getbox(no)
+        {
+
+            return document.getElementById("r"+no).innerHTML;
+
+        }
+        function move(a,b,c,m)
+        {
+            if (getbox(a)==m && getbox(b)==m && getbox(c)==m)
+            {
+                return true;
+            }
+            else
+            return false;
+
+        }
+        function winner()
+
+        {
+
+            if(count<9)
+             {       
+                        if (  move(1,2,3,sign) ||  move(4,5,6,sign) ||  move(7,8,9,sign) ||  move(1,2,3,sign) ||  move(1,4,7,sign) ||  move(2,5,8,sign) ||      move(3,6,9,sign) || move(1,5,9,sign) ||   move(3,5,7,sign)           )
+                    {
+                        alert('😀 congratulation  '+ sign +' win ');
+                       
+                        location.replace("tic-tac-toe.html");
+
+                    }
+
+            }
+            else{
+                alert('draw ');
+                        location.replace("tic-tac-toe.html");
+
+            }
+            
+            
+                
+            
+        }
+
+
+    </script>
+    
+</body>
+</html>

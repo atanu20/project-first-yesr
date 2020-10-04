@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        body{
+    font-family: 'Inconsolata', monospace;
+    font-size:20px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+p{
+font-size: 20px;
+color:red;
+
+}
+.box{
+border:2px solid purple ;
+border-radius: 15px;
+outline: none;
+padding:5px 10px;
+
+background: transparent;
+}
+input{
+    color:red;
+}
+i{
+    color:yellow;
+}
+    </style>
+
+</head>
+<body>
+    
+    <br><br>
+    
+    <div class="text-center container ">
+
+    <form>
+    <h2 class="text-primary"><i class="fa fa-thermometer-quarter"></i> CONVERSION CALCULATOR</h2><br><br>
+       <p>Kilometre:</p>
+    <input type="text" size="" onkeyup="my()" id="aa" class="box" autocomplete="off">  <br><br>
+    
+   <p> Metre: </p>
+    <input type="text" size="" onkeyup="my1()"  id="bb" class="box" autocomplete="off">  <br><br>
+    <p> Centimetre:</p>
+    <input type="text" size="" onkeyup="my2()" id="cc" class="box" autocomplete="off"> <br><br>
+     <p> Milimetre:</p>
+    <input type="text" size="" onkeyup="my3()" id="dd" class="box" autocomplete="off"> <br><br>
+   <p> Micrometre:</p>
+    <input type="text" size="" onkeyup="my4()" id="ee" class="box" autocomplete="off"> <br><br>
+   <p> Mile:</p>
+    <input type="text" size="" onkeyup="my5()" id="ff" class="box" autocomplete="off"> <br><br>
+<p>Inch:</p>
+    <input type="text" size="" onkeyup="my6()" id="gg" class="box" autocomplete="off"> <br><br>
+    
+    <input type="reset" value="Clear" class="btn btn-warning" >
+  
+</form>
+</div><br><br>
+<script>
+
+
+function my(){
+    var aa =document.getElementById('aa').value;
+    var b=aa*1000;
+    var c=aa*100000;
+    var d=aa*1000000;
+    var e=d*1000000;
+    var f=aa/1.609;
+    var g=aa*39370.1;
+        document.getElementById('bb').value=b+"m";
+        document.getElementById('cc').value=c+"cm";
+        document.getElementById('dd').value=d+"mm";
+        document.getElementById('ee').value=e+"um";
+        document.getElementById('ff').value=f+"mile";
+        document.getElementById('gg').value=g+"inche";
+
+
+}
+function my1(){
+    var bb =document.getElementById('bb').value;
+    var a= bb/1000;
+    var  c=bb*100;
+    var  d=bb*1000;
+    var e=d*1000;
+    var f=bb/1609;
+    var g=bb*39.37;
+            document.getElementById('aa').value=a+"km";
+            document.getElementById('cc').value=c+"cm";
+            document.getElementById('dd').value=d+"mm";
+            document.getElementById('ee').value=e+"um";
+            document.getElementById('ff').value=f+"mile";
+            document.getElementById('gg').value=g+"inche";
+
+
+}
+function my2(){
+    var cc =document.getElementById('cc').value;
+    var a= cc/100000;
+    var  b=cc/100;
+    var  d=cc*10;
+    var e=cc*1000;
+    var f=cc/160934;
+    var g=cc/2.54;
+            document.getElementById('aa').value=a+"km";
+            document.getElementById('bb').value=b+"m";
+            document.getElementById('dd').value=d+"mm";
+            document.getElementById('ee').value=e+"um";
+            document.getElementById('ff').value=f+"mile";
+            document.getElementById('gg').value=g+"inche";
+
+
+}
+
+function my3(){
+    var dd =document.getElementById('dd').value;
+    var a= dd/1000000;
+    var  b=dd/1000;
+    var  c=dd/10;
+    var e=dd*1000;
+    var f=dd/1609000;
+    var g=dd/25.4;
+            document.getElementById('aa').value=a+"km";
+            document.getElementById('bb').value=b+"m";
+            document.getElementById('cc').value=c+"cm";
+            document.getElementById('ee').value=e+"um";
+            document.getElementById('ff').value=f+"mile";
+            document.getElementById('gg').value=g+"inche";
+
+
+}
+function my4(){
+    var ee =document.getElementById('ee').value;
+    var a= ee/1000000000;
+    var  b=ee/1000000;
+    var  c=ee/10000;
+    var d=ee/1000;
+    var f=ee/1609000000;
+    var g=ee/25400;
+            document.getElementById('aa').value=a+"km";
+            document.getElementById('bb').value=b+"m";
+            document.getElementById('cc').value=c+"cm";
+            document.getElementById('dd').value=d+"mm";
+            document.getElementById('ff').value=f+"mile";
+            document.getElementById('gg').value=g+"inche";
+
+
+}
+function my5(){
+    var ff =document.getElementById('ff').value;
+    var a= ff*1.609;
+    var  b=ff*1609.34;
+    var  c=ff*160934;
+    var d=ff*1609000;
+    var e=ff*1609000000;
+    var g=ff*63360;
+            document.getElementById('aa').value=a+"km";
+            document.getElementById('bb').value=b+"m";
+            document.getElementById('cc').value=c+"cm";
+            document.getElementById('dd').value=d+"mm";
+            document.getElementById('ee').value=e+"um";
+            document.getElementById('gg').value=g+"inche";
+
+
+}
+function my6(){
+    var gg =document.getElementById('gg').value;
+    var a= gg/39370;
+    var  b=gg/39.37;
+    var  c=gg*2.54;
+    var d=gg*25.4;
+    var e=gg*25400;
+    var f=gg/63360;
+            document.getElementById('aa').value=a+"km";
+            document.getElementById('bb').value=b+"m";
+            document.getElementById('cc').value=c+"cm";
+            document.getElementById('dd').value=d+"mm";
+            document.getElementById('ee').value=e+"um";
+            document.getElementById('ff').value=f+"mile";
+
+
+}
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
